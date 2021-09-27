@@ -1,0 +1,27 @@
+.App {
+  background-color: royalblue;
+  display: flex; 
+  color: black;
+  height: 100vh;
+}
+
+.container {
+  border: 1px solid blue;
+  border-radius: 10px;
+  height: 90vh;
+  width: 50vw;
+  margin: auto;
+  text-align: center;
+  background-color: aliceblue
+  
+}
+
+.dicWrap {
+  background-color: white ;
+  border-radius: 10px;
+  border: 1px solid gray;
+  margin: 20px auto;
+  width: 45vw;
+  height: 20vh;
+  text-decoration: underline;
+}
