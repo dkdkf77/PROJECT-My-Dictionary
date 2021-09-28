@@ -1,5 +1,9 @@
-import './main.css';
+import "./Page/main.css";
 import React from "react";
+import MyDic from "./Page/MyDic";
+import Regist from "./Page/Regist";
+import {Route} from "react-router-dom";
+
 
 
 class App extends React.Component{
@@ -7,45 +11,30 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-      list: ["단어","설명","예시"]
+      list: ["안녕", "인사", "hello"]
     };
+
   }
+
+  componentDidMount() {
+    // console.log(this.state.list)
+
+  }
+
   render() {
-    console.log(this.state.list);
     return (
-      <div className = "App">
-        <div className = "container">
-          <h2>MY DICTIONARY</h2>
-          <hr className ="line" />
-          <div className = "dicWrap">
-            <h6>단어</h6>
-            <p></p>
-            <h6>설명</h6>
-            <p></p>
-            <h6>예시</h6>
-            <p></p>
-          </div>
-          <div className = "dicWrap">
-            <h6>단어</h6>
-            <p></p>
-            <h6>설명</h6>
-            <p></p>
-            <h6>예시</h6>
-            <p></p>
-          </div>
-          <div className = "dicWrap">
-            <h6>단어</h6>
-            <p></p>
-            <h6>설명</h6>
-            <p></p>
-            <h6>예시</h6>
-            <p></p>
-          </div>
+        <div className = "App">
+          <Route path="/" exact>
+            <MyDic/>
+          </Route>
+          <Route path="/Regist" exact>
+            <Regist list = {this.state.list}/>
+          </Route>
         </div>
-      </div>
     );
   }
 }
-    
+
+
 
 export default App;
