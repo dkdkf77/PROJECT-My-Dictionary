@@ -1,29 +1,34 @@
-import React,{useEffect, useRef} from "react";
+import React from "react";
 import "./main.css"
 import { useHistory } from "react-router";
 
-const Regist = (props) => {
+const Regist = (list) => {
   const history = useHistory();
-  const RefText = useRef();
+  const RefText = React.useRef(null);
 
-    useEffect(()=>{
-      console.log(props.list);    
-    })
+    
+
+    window.setTimeout(() => {
+      console.log(RefText);
+    } , 1000);
 
     return (
-      <>
+      <div ref = {RefText}>
           <div>단어 추가하기!</div>
           <h3>단어</h3>
-          <input/>
+          <input type="text" ref ={RefText}
+          onChange ={() => {
+          console.log(list);
+          }}/>
           <h3>설명</h3>
           <input/>
           <h3>예시</h3>
           <input/>
-          <button ref ={RefText} >추가하기</button>
+          <button>추가하기</button>
           <button onClick = {() =>{
             history.push("/")
           }}>돌아가기</button>
-      </>
+      </div>
   );
 };
 

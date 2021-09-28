@@ -13,12 +13,12 @@ class App extends React.Component{
     this.state = {
       list: ["안녕", "인사", "hello"]
     };
-
+    this.text = React.createRef();
   }
 
   componentDidMount() {
-    // console.log(this.state.list)
-
+    console.log(this.state.list)
+  
   }
 
   render() {
@@ -28,7 +28,7 @@ class App extends React.Component{
             <MyDic/>
           </Route>
           <Route path="/Regist" exact>
-            <Regist list = {this.state.list}/>
+            <Regist list = {this.state.text}/>
           </Route>
         </div>
     );
