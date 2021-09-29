@@ -8,7 +8,7 @@ const MyDic = (props) => {
   const data = useSelector((state) => state.Dic.list);
   
   return (
-        <>
+        <>s
         
           <div className = "App">
             <Container>
