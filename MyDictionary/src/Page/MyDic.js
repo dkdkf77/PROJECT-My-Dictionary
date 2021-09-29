@@ -7,9 +7,9 @@ const MyDic = (props) => {
   const history = useHistory();
   const data = useSelector((state) => state.Dic.list);
   
-  console.log(data)
   return (
         <>
+        
           <div className = "App">
             <Container>
               <Title>MY DICTIONARY</Title>
