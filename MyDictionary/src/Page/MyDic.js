@@ -1,9 +1,13 @@
 import React from "react"
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const MyDic = (props) => {
   const history = useHistory();
+  const data = useSelector((state) => state.Dic.list);
+  
+  console.log(data)
   return (
         <>
           <div className = "App">
@@ -12,9 +16,7 @@ const MyDic = (props) => {
               <Line/>
               <ListItem>
               <div>
-                <p>단어</p>
-                <p>설명</p>
-                <p>예시</p>
+                <p></p>
               </div>
               <Btn>
                 <button onClick ={() =>{

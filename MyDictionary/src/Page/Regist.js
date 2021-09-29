@@ -1,11 +1,11 @@
 import React from "react";
 import "./main.css"
 import { useHistory } from "react-router";
+import { useSelector } from "react-redux";
 
-const Regist = (list) => {
+const Regist = (props) => {
   const history = useHistory();
   const RefText = React.useRef(null);
-
     
 
     window.setTimeout(() => {
@@ -18,7 +18,7 @@ const Regist = (list) => {
           <h3>단어</h3>
           <input type="text" ref ={RefText}
           onChange ={() => {
-          console.log(list);
+          console.log(props);
           }}/>
           <h3>설명</h3>
           <input/>
